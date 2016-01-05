@@ -1,0 +1,10 @@
+{
+    "noisefm": {
+        "name" : "Noise FM",
+        "url" : "https://play.sas-media.ru/play"
+    },
+    "sample": {
+        "name" : "Sample Audio File",
+        "url" : "sample.mp3"
+    }
+}
