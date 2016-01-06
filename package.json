@@ -18,6 +18,7 @@
   "homepage": "https://github.com/casperlofgren/stream-bot#readme",
   "dependencies": {
     "discord.js": "^5.3.2",
+    "soundcloudr": "^1.1.0",
     "spotify-web": "git+https://github.com/mattyway/node-spotify-web.git"
   }
 }

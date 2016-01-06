@@ -2,5 +2,6 @@
     "email" : "email address here",
     "password" : "password here",
     "spotifyuser" : "spotify username here",
-    "spotifypass" : "spotify password here"
+    "spotifypass" : "spotify password here",
+    "soundcloudcid" : "soundcloud client id from http://soundcloud.com/you/apps"
 }

@@ -6,6 +6,9 @@ var radio = require("./radio.json");
 
 var Spotify = require("spotify-web");
 
+var soundcloudr = require('soundcloudr');
+soundcloudr.setClientId(config.soundcloudcid);
+
 var bot = new Discord.Client();
 
 var inChannel = false;
@@ -78,6 +81,19 @@ bot.on("message", function (message) {
                 });
             } else {
                 bot.sendMessage(message.channel, "Please specify a Spotify track URI");
+            }
+        }
+        
+        if (cmdTxt === "soundcloud" && inChannel) {
+            if (suffix) {                
+                soundcloudr.getStreamUrl(suffix, function(err, url) {
+                    if (err) {
+                        bot.sendMessage(message.channel, "An error occured: " + err.message);
+                    } else {
+                        bot.voiceConnection.playFile(url);
+                        //bot.setStatus("idle", "SoundCloud track"); // TODO: fetch track name
+                    }
+                });
             }
         }
         
