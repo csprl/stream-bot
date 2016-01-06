@@ -6,8 +6,7 @@
  - Copy `config.json.example` to `config.json` and fill in your Discord details
  - Copy `radio.json.example` to `radio.json` and modify it to your liking
  - Run with `node index.js`
-
-
+<br/>
  - To add the bot to a channel, type `!join <channel>`
  - If you want to remove the bot from the channel, use `!leave`
  - All radio channels and audio tracks are listed with `!radio`
