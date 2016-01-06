@@ -4,6 +4,8 @@ var config = require("./config.json");
 
 var radio = require("./radio.json");
 
+var Spotify = require("spotify-web");
+
 var bot = new Discord.Client();
 
 var inChannel = false;
@@ -57,6 +59,26 @@ bot.on("message", function (message) {
         if (rstat && inChannel) {
                 bot.voiceConnection.playFile(rstat.url);
                 bot.setStatus("idle", rstat.name);
+        }
+        
+        if (cmdTxt === "spotify" && inChannel) {
+            if (suffix) {
+                Spotify.login(config.spotifyuser, config.spotifypass, function (err, spotify) {
+                    if (err) throw err;
+                  
+                    spotify.get(suffix, function (err, track) {
+                        if (err) {
+                            bot.sendMessage(message.channel, "An error occured: " + err);
+                        } else {
+                            bot.sendMessage(message.channel, "Playing **" + track.name + "** by **" + track.artist[0].name + "**");
+                            bot.setStatus("idle", track.name + " by " + track.artist[0].name);
+                            bot.voiceConnection.playRawStream(track.play().on('finish', function () { bot.setStatus("idle"); spotify.disconnect(); }) );
+                        }
+                    });
+                });
+            } else {
+                bot.sendMessage(message.channel, "Please specify a Spotify track URI");
+            }
         }
         
         if (cmdTxt === "join") {

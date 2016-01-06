@@ -11,7 +11,9 @@
  - If you want to remove the bot from the channel, use `!leave`
  - All radio channels and audio tracks are listed with `!radio`
  - To listen to an entry in `radio.json` type ! and the name of the entry, for example `!noisefm` or `!sample` from radio.json.example
+ - Use `!spotify <spotify track uri>` to play to a Spotify song
 
 ## Notes
  - The values in the url fields in radio.json **have to be in mp3 format and readable by ffmpeg** in order to work
  - If the bot isn't playing anything, try typing `ffplay <url>` in cmd/terminal to make sure it's readable by ffmpeg
+ - You can copy the track URI by right-clicking on a song in Spotify

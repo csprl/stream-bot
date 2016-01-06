@@ -1,4 +1,6 @@
 {
     "email" : "email address here",
-    "password" : "password here"
+    "password" : "password here",
+    "spotifyuser" : "spotify username here",
+    "spotifypass" : "spotify password here"
 }
