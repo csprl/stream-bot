@@ -7,6 +7,7 @@
  - Copy `radio.json.example` to `radio.json` and modify it to your liking
  - Run with `node index.js`
  - To add the bot to a channel, type `!join <channel>`
+ - To stop streaming or playing, simply type `!stop`
  - If you want to remove the bot from the channel, use `!leave`
  - All radio channels and audio tracks are listed with `!radio`
  - To listen to an entry in `radio.json` type ! and the name of the entry, for example `!noisefm` or `!sample` from radio.json.example

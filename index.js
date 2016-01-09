@@ -121,6 +121,13 @@ bot.on("message", function (message) {
             }
         }
         
+        if (cmdTxt === "stop") {
+            if (inChannel) {
+                bot.voiceConnection.stopPlaying();
+                bot.setStatus("idle");
+            }
+        }
+        
         if (message.author == bot.user) {
             return;
         }
