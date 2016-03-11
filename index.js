@@ -60,6 +60,9 @@ bot.on("message", function (message) {
         }
         
         if (rstat && inChannel) {
+                if (bot.voiceConnection.playing) {
+                    bot.voiceConnection.stopPlaying();
+                }
                 bot.voiceConnection.playFile(rstat.url);
                 bot.setStatus("idle", rstat.name);
         }
