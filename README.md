@@ -1,4 +1,5 @@
 # stream-bot
+**Development on this bot was stopped long ago and it most likely doesn't work anymore. Take a look at [CoreBot](https://github.com/casperlofgren/CoreBot) which has similar features but is being (somewhat) actively developed.**
 
 ## Usage
  - First install dependencies with `npm install`
